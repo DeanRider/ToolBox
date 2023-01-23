@@ -1,0 +1,12 @@
+TTF_Uncut_HeLa_revised.fa TTF_Uncut_FUC.dedup.fa
+TTF_Uncut_HeLa_revised.fa TTF_Uncut_FUS.dedup.fa
+TTR_Uncut_HeLa_revised.fa TTR_Uncut_RUC.dedup.fa
+TTR_Uncut_HeLa_revised.fa TTR_Uncut_RUS.dedup.fa
+1BC1_HeLa_revised.fa 1BC1.dedup.fa
+2BC2_HeLa_revised.fa 2BC2.dedup.fa
+3BC3_HeLa_revised.fa 3BC3.dedup.fa
+4BC4_HeLa_revised.fa 4BC4.dedup.fa
+5BC5_HeLa_revised.fa 5BC5.dedup.fa
+TTF_XbaI_eGFP_HeLa_revised.fa TTF_XbaI_eGFP_FCC.dedup.fa
+TTR_XbaI_eGFP_HeLa_revised.fa TTR_XbaI_eGFP_RCC.dedup.fa
+END END
