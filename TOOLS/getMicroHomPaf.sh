@@ -27,7 +27,8 @@ location=$(dirname "$parseref")
 awk -F "\t" '{print $1}' $parseref | sort -u > readslisttoget.txt
 #awk -v FS="\t" 'NR==FNR{rows[$1]++;next}(substr($NF,1,length($NF)-1) in rows)' readslisttoget.txt $location/*.sam.paf
 echo $location/*.sam.paf
-grep -f readslisttoget.txt $location/*.sam.paf | awk -F "\t" 'BEGIN {OFS="\t"}{print $1,$2,$3,$4,$5,$6,$7,$8,$9}' > $location/MicroHomologyPartialPafData.txt
+echo $'Read\tLength\tStart\tEnd\tDirection\tReference\tLength\tStart\tEnd' > $location/MicroHomologyPartialPafData.txt
+grep -f readslisttoget.txt $location/*.sam.paf | awk -F "\t" 'BEGIN {OFS="\t"}{print $1,$2,$3,$4,$5,$6,$7,$8,$9}' >> $location/MicroHomologyPartialPafData.txt
 rm readslisttoget.txt
 echo -e "\033[1;34m -. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .\033[0m";
 echo -e "\033[1;30m ||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|\033[0m";
