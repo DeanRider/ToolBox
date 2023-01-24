@@ -76,8 +76,8 @@ awk ' BEGIN{OFS="\t"}  $4~/r/ && $11~/f/ { print $1, $9, $3, $5, $7, $7-($3-$9),
 
 
 awk ' BEGIN{OFS="\t"}  $4~/r/ && $11~/r/ { print $1, $9, $3, $5, $7, $7-($3-$9), $12, $14, $14-($3-$9) ; } ' $parseref.JoinedLinesWithMicroHomology.tmp >> $parseref.SixSets.tmp
-
-sort -k 1,1 -k 2,2n $parseref.SixSets.tmp > $parseref.OverlappingEnds.txt
+echo $'Read\tStart\tEnd\tReference1\tStart\tEnd\tReference2\tStart\tEnd' > $parseref.OverlappingEnds.txt
+sort -k 1,1 -k 2,2n $parseref.SixSets.tmp >> $parseref.OverlappingEnds.txt
 
 echo -e "\033[1;34m -. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .\033[0m";
 echo -e "\033[1;30m ||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|\033[0m";
