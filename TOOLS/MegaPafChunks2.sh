@@ -36,7 +36,8 @@ echo "mean " >> $paffile.chunklengths.txt
 awk '{x+=$11}END{print x/NR}' $paffile.Ectopic.tmp >> $paffile.chunklengths.txt
 echo "stdev " >> $paffile.chunklengths.txt
 awk '{x+=$11;y+=$11^2}END{print sqrt(y/NR-(x/NR)^2)}' $paffile.Ectopic.tmp >> $paffile.chunklengths.txt
-echo "histogram " >> $paffile.chunklengths.txt
+echo "histogram (zero based numbering)" >> $paffile.chunklengths.txt
+echo "Postion Count" >> $paffile.chunklengths.txt
 awk '{counts[$11]++} END {for (c in counts) print c, counts[c]}' $paffile.Ectopic.tmp | sort -nk1 >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
@@ -46,7 +47,8 @@ echo "mean " >> $paffile.chunklengths.txt
 awk '{x+=$11}END{print x/NR}' $paffile.chr.tmp >> $paffile.chunklengths.txt
 echo "stdev " >> $paffile.chunklengths.txt
 awk '{x+=$11;y+=$11^2}END{print sqrt(y/NR-(x/NR)^2)}' $paffile.chr.tmp >> $paffile.chunklengths.txt
-echo "histogram " >> $paffile.chunklengths.txt
+echo "histogram (zero based numbering)" >> $paffile.chunklengths.txt
+echo "Postion Count" >> $paffile.chunklengths.txt
 awk '{counts[$11]++} END {for (c in counts) print c, counts[c]}' $paffile.chr.tmp | sort -nk1 >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
@@ -56,7 +58,8 @@ echo "Hy-TK " >> $paffile.chunklengths.txt
 awk '{x+=$11}END{print x/NR}' $paffile.Hy.tmp >> $paffile.chunklengths.txt
 echo "stdev " >> $paffile.chunklengths.txt
 awk '{x+=$11;y+=$11^2}END{print sqrt(y/NR-(x/NR)^2)}' $paffile.Hy.tmp >> $paffile.chunklengths.txt
-echo "histogram " >> $paffile.chunklengths.txt
+echo "histogram (zero based numbering)" >> $paffile.chunklengths.txt
+echo "Postion Count" >> $paffile.chunklengths.txt
 awk '{counts[$11]++} END {for (c in counts) print c, counts[c]}' $paffile.Hy.tmp | sort -nk1 >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
 echo " " >> $paffile.chunklengths.txt
