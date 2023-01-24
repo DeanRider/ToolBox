@@ -7,6 +7,7 @@ while read fastaref; do
 
 echo $fastaref
 cat $fastaref | sed 's/m64296e_220610_145044\///g' >> $fastaref.SG.fa
+# change the above to reflect any new prefix in the ccs read names when new SMRT cell runs are done
 
 echo -e "\033[1;34m -. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .-. .-.   .\033[0m";
 echo -e "\033[1;30m ||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|||\|||\ /|\033[0m";
