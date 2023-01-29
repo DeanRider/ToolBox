@@ -22,7 +22,7 @@
 # use: bash Pub2Circos2.1.sh
 #
 # written January 9, 2023 by S. Dean Rider Jr. 
-# REVISED JANUARY 18, 2023
+# REVISED JANUARY 29, 2023
 #######################################################################
 
 # scan directory structure for sam results and store as a list
