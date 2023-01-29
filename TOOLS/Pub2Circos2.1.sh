@@ -14,7 +14,7 @@
 # ectopic to ectpoic linkages to simplify the appearance of the circos plots.
 #
 # Requirements:
-# .paf file, a custom karyotype file is to be used with Circos.
+# .paf file, .sam, a custom karyotype file is to be used with Circos.
 #
 # Best file to use ends with "CircosSimplifiedThickness.tsv".
 # Other files are more for information than graphing
